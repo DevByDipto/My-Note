@@ -1,0 +1,6 @@
+app.get("/coffees", async (req, res) => {
+  const result = await coffeDataCollection.find().toArray();
+  res.send(result);
+  console.log(result);
+});
+
