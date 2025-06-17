@@ -14,9 +14,7 @@ app.get("/coffees", async (req, res) => {
 // না করলেই কেন error দেয় বা কাজ করে না?
 
 // 🔍 প্রশ্ন ভেঙে দেখি:
-// js
-// Copy
-// Edit
+
 // const result = await coffeDataCollection.find().toArray()
 // তুমি জানতে চাইছো:
 
@@ -28,9 +26,7 @@ app.get("/coffees", async (req, res) => {
 
 // ✅ উত্তর ধাপে ধাপে:
 // 🔹 ১. find() কি return করে?
-// js
-// Copy
-// Edit
+
 // const cursor = coffeDataCollection.find();
 // 👉 এটা একটা "Cursor" object return করে।
 
@@ -39,18 +35,14 @@ app.get("/coffees", async (req, res) => {
 // এটা সাধারণত "lazy" হয় — মানে একসাথে সব ডেটা আনে না।
 
 // 🔹 ২. toArray() কি করে?
-// js
-// Copy
-// Edit
+
 // const result = await coffeDataCollection.find().toArray();
 // এটি cursor-এর সব ডেটা একসাথে এনে একটি JavaScript array বানায়।
 
 // তুমি তখন normal array এর মতো .map(), .length, res.send() এসব ব্যবহার করতে পারো।
 
 // 🔹 ৩. যদি toArray() না দাও?
-// js
-// Copy
-// Edit
+
 // const result = await coffeDataCollection.find();
 // res.send(result);
 // এখন result হচ্ছে cursor object, array না।
@@ -67,9 +59,7 @@ app.get("/coffees", async (req, res) => {
 
 // 🧪 উদাহরণ:
 // ✅ সঠিক:
-// js
-// Copy
-// Edit
+
 // const result = await coffeDataCollection.find().toArray();
 // res.send(result); // array pathabe
 // ❌ ভুল:
