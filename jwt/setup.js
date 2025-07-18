@@ -224,11 +224,4 @@ req.tokenEmail = userInfo.email
 
      */}
 
-     function addSugar(cup) {
-  cup.sugar = 2;
-  // return cup; 
-}
-
-const myCup = {};
-const result = addSugar({});
-console.log(result.sugar);
+    
