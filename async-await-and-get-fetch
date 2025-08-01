@@ -1,0 +1,25 @@
+const fetchData = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  console.log({res});
+  
+  return await res.json();
+};
+
+// 1. res.body = response এর ভিতরের raw data stream
+// (যেটা এখনো আপনি parse করতে পারেন না)
+
+// 2. res.json():
+
+// stream থেকে পুরো data পড়ে
+
+// ধরে নেয় যে সেটা JSON string
+
+// JSON.parse() দিয়ে JavaScript object বানায়
+
+// সবশেষে একটা Promise return করে, যেটা resolve হলে আপনি সেই object পান
+
+// 3. await res.json():
+
+// এই Promise-কে resolve করতে অপেক্ষা করে
+
+// resolve হলে আপনি পান final usable JavaScript object
